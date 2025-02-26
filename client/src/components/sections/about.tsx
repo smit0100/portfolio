@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 
 export default function About() {
   return (
@@ -47,6 +45,13 @@ export default function About() {
                   LinkedIn
                 </a>
               </motion.p>
+              <motion.p 
+                className="text-lg mb-4"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+              >
                 Currently working as a Trainee at Inventyv Software Services Pvt. Ltd., where I contribute to developing innovative solutions and learning cutting-edge technologies. Additionally, I work as a freelance Next.js developer, creating custom web applications for clients.
               </motion.p>
               <motion.p 
