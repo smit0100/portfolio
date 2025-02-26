@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function About() {
   return (
