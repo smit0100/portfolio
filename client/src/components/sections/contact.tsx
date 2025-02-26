@@ -47,15 +47,19 @@ export default function Contact() {
         publicKey: !!import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       });
 
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        message: data.message,
+        to_name: "Smit Dankhra",
+        to_email: "smitdankhra86@gmail.com",
+      };
+
       const result = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: data.name,
-          from_email: data.email,
-          message: data.message,
-          to_email: "smitdankhra86@gmail.com", // Add recipient email to template
-        }
+        templateParams
       );
 
       if (result.status === 200) {
