@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
+import { useEffect } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -28,6 +29,11 @@ export default function Contact() {
     },
   });
 
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const onSubmit = async (data: FormValues) => {
     try {
       await emailjs.send(
@@ -37,20 +43,20 @@ export default function Contact() {
           from_name: data.name,
           from_email: data.email,
           message: data.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        }
       );
 
       toast({
-        title: "Message sent!",
-        description: "I'll get back to you as soon as possible.",
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
       });
 
       form.reset();
     } catch (error) {
+      console.error("EmailJS Error:", error);
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
+        title: "Failed to send message",
+        description: "There was an error sending your message. Please try again later or contact me directly at smitdankhra86@gmail.com",
         variant: "destructive",
       });
     }
@@ -102,14 +108,22 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Your message..." {...field} />
+                        <Textarea 
+                          placeholder="Your message..." 
+                          className="min-h-[120px]" 
+                          {...field} 
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full"
+                  disabled={form.formState.isSubmitting}
+                >
+                  {form.formState.isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </Form>
