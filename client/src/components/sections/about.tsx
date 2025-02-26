@@ -30,6 +30,23 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
+                Contact me at{" "}
+                <a 
+                  href="mailto:smitdankhra01@gmail.com" 
+                  className="text-primary hover:underline"
+                >
+                  smitdankhra01@gmail.com
+                </a>
+                {" "}or connect with me on{" "}
+                <a 
+                  href="https://www.linkedin.com/in/smit-dankhra" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-primary hover:underline"
+                >
+                  LinkedIn
+                </a>
+              </motion.p>
                 Currently working as a Trainee at Inventyv Software Services Pvt. Ltd., where I contribute to developing innovative solutions and learning cutting-edge technologies. Additionally, I work as a freelance Next.js developer, creating custom web applications for clients.
               </motion.p>
               <motion.p 
