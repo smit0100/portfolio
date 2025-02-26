@@ -1,5 +1,5 @@
-import { SiReact, SiNodedotjs, SiMongodb, SiJavascript, SiTypescript, SiPython, SiFirebase, SiGit } from "react-icons/si";
-import { Code2, Database, Globe, Laptop, Share2, Wrench } from "lucide-react";
+import { SiReact, SiNodedotjs, SiMongodb, SiJavascript, SiTypescript, SiPython, SiFirebase, SiGit, SiNextdotjs, SiRust, SiDocker } from "react-icons/si";
+import { Code2, Database, Globe, Laptop, Share2, Wrench, Bot } from "lucide-react";
 
 export const SKILLS = [
   {
@@ -8,9 +8,24 @@ export const SKILLS = [
     description: "Frontend development with React and its ecosystem",
   },
   {
+    name: "Next.js",
+    icon: SiNextdotjs,
+    description: "Server-side rendering and full-stack React applications",
+  },
+  {
     name: "Node.js",
     icon: SiNodedotjs,
     description: "Backend development with Express and Node.js",
+  },
+  {
+    name: "Rust",
+    icon: SiRust,
+    description: "Systems programming and high-performance applications",
+  },
+  {
+    name: "Docker",
+    icon: SiDocker,
+    description: "Containerization and deployment automation",
   },
   {
     name: "JavaScript/TypeScript",
@@ -36,11 +51,6 @@ export const SKILLS = [
     name: "Git & Version Control",
     icon: SiGit,
     description: "Source code management and collaboration",
-  },
-  {
-    name: "Full Stack Development",
-    icon: Code2,
-    description: "End-to-end application development",
   }
 ];
 
@@ -70,24 +80,24 @@ export const PROJECTS = [
 
 export const SERVICES = [
   {
-    title: "Full Stack Development",
-    icon: Code2,
-    description: "End-to-end web application development with React and Node.js",
+    title: "Next.js Development",
+    icon: Globe,
+    description: "Building high-performance applications with Next.js",
   },
   {
-    title: "Frontend Development",
-    icon: Globe,
-    description: "Creating responsive and interactive user interfaces",
+    title: "Web Scraping Solutions",
+    icon: Bot,
+    description: "Automated data extraction and web scraping services",
+  },
+  {
+    title: "SaaS Platform Development",
+    icon: Code2,
+    description: "Building scalable SaaS applications with modern technologies",
   },
   {
     title: "Backend Development",
     icon: Database,
     description: "Building robust server-side applications and APIs",
-  },
-  {
-    title: "Database Design",
-    icon: Share2,
-    description: "Designing and implementing efficient database solutions",
   },
   {
     title: "Technical Consulting",
