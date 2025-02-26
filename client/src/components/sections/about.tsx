@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function About() {
   return (
-    <section className="py-16 px-4 bg-muted/30">
+    <section id="about" className="py-16 px-4 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}

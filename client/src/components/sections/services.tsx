@@ -4,7 +4,7 @@ import { SERVICES } from "@/lib/constants";
 
 export default function Services() {
   return (
-    <section className="py-16 px-4">
+    <section id="services" className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}

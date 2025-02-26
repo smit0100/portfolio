@@ -6,7 +6,7 @@ import { PROJECTS } from "@/lib/constants";
 
 export default function Projects() {
   return (
-    <section className="py-16 px-4 bg-muted/30">
+    <section id="projects" className="py-16 px-4 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
