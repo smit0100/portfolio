@@ -13,24 +13,30 @@ const emailSchema = z.object({
 export async function registerRoutes(app: Express): Promise<Server> {
   // Create reusable transporter object using SMTP transport
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    service: 'gmail',  // Using Gmail service preset
     auth: {
       user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      pass: process.env.SMTP_PASS, // App Password from Gmail
     },
   });
+
+  // Verify SMTP connection on startup
+  try {
+    await transporter.verify();
+    console.log('SMTP Server is ready to send emails');
+  } catch (error) {
+    console.error('SMTP Server verification failed:', error);
+  }
 
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = emailSchema.parse(req.body);
 
       // Send mail with defined transport object
-      await transporter.sendMail({
-        from: `"Portfolio Contact" <${validatedData.email}>`,
+      const info = await transporter.sendMail({
+        from: `"Portfolio Contact Form" <${process.env.SMTP_USER}>`, // Using authenticated email as sender
         to: "smitdankhra86@gmail.com",
-        subject: "New Contact Form Submission",
+        subject: "New Portfolio Contact Form Submission",
         text: `
 Name: ${validatedData.name}
 Email: ${validatedData.email}
@@ -42,8 +48,10 @@ Message: ${validatedData.message}
 <p><strong>Email:</strong> ${validatedData.email}</p>
 <p><strong>Message:</strong> ${validatedData.message}</p>
         `,
+        replyTo: validatedData.email // Allow replying directly to the sender
       });
 
+      console.log('Message sent: %s', info.messageId);
       res.json({ message: "Email sent successfully" });
     } catch (error) {
       console.error("Email sending error:", error);
