@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -12,15 +12,23 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold font-inter mb-6">
-            MERN Stack Developer & <br />
-            <span className="text-primary">Next.js Expert</span>
+            Smit Dankhra <br />
+            <span className="text-primary">Full Stack Developer</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Building modern web applications with cutting-edge technologies and exceptional user experiences.
+            Passionate Full Stack Developer specializing in React.js, Node.js, and modern web technologies.
+            Building innovative solutions with clean, efficient code.
           </p>
-          <Button size="lg" className="gap-2">
-            View Projects <ArrowRight className="w-4 h-4" />
-          </Button>
+          <div className="flex gap-4 justify-center">
+            <Button size="lg" className="gap-2" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+              View Projects <ArrowRight className="w-4 h-4" />
+            </Button>
+            <Button size="lg" variant="outline" className="gap-2" asChild>
+              <a href="/Smit_Dankhra.pdf" download>
+                Download Resume <Download className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>

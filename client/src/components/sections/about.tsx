@@ -23,13 +23,13 @@ export default function About() {
             <Card>
               <CardContent className="p-6">
                 <p className="text-lg mb-4">
-                  With over 5 years of experience in web development, I specialize in building scalable applications using the MERN stack and Next.js.
+                  I am a Full Stack Developer with comprehensive experience in web development, focusing on building scalable and efficient applications using modern technologies.
                 </p>
                 <p className="text-lg mb-4">
-                  My expertise extends to web scraping solutions using tools like Puppeteer, Playwright, and Cheerio, helping businesses automate data collection and analysis.
+                  Currently pursuing my education at the Faculty of Engineering and Applied Science, I combine academic knowledge with practical development experience to create innovative solutions.
                 </p>
                 <p className="text-lg">
-                  I'm passionate about creating efficient, user-friendly applications that solve real-world problems.
+                  My development approach emphasizes clean code, user experience, and performance optimization, ensuring that applications are both functional and maintainable.
                 </p>
               </CardContent>
             </Card>
