@@ -1,4 +1,3 @@
-
 import { FaReact, FaNodeJs, FaDocker, FaAws, FaGithub } from 'react-icons/fa';
 import { SiTypescript, SiJavascript, SiMongodb, SiExpress, SiPostgresql, SiRedis, SiGraphql, SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 
@@ -75,57 +74,6 @@ export const SKILLS = [
   }
 ];
 
-export const PROJECTS = [
-  {
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform with product catalog, shopping cart, user authentication, and payment processing integration.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'Stripe'],
-    image: 'https://via.placeholder.com/600x340/1a1a2e/ffffff?text=E-Commerce+Platform',
-    github: 'https://github.com/yourusername/ecommerce-platform',
-    demo: 'https://ecommerce-demo.yourdomain.com'
-  },
-  {
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, task assignment, progress tracking, and team collaboration features.',
-    tags: ['React', 'Redux', 'Node.js', 'Socket.io', 'PostgreSQL'],
-    image: 'https://via.placeholder.com/600x340/16213e/ffffff?text=Task+Management+App',
-    github: 'https://github.com/yourusername/task-management',
-    demo: 'https://taskapp-demo.yourdomain.com'
-  },
-  {
-    title: 'Content Management System',
-    description: 'A headless CMS with an intuitive dashboard for content creation, API content delivery, media management, and user role permissions.',
-    tags: ['React', 'GraphQL', 'Node.js', 'MongoDB', 'AWS S3'],
-    image: 'https://via.placeholder.com/600x340/0f3460/ffffff?text=Content+Management+System',
-    github: 'https://github.com/yourusername/cms-platform',
-    demo: 'https://cms-demo.yourdomain.com'
-  },
-  {
-    title: 'Real-time Chat Application',
-    description: 'A feature-rich chat platform with private messaging, group chats, file sharing, and read receipts built on a modern tech stack.',
-    tags: ['Next.js', 'WebSockets', 'Express', 'MongoDB', 'Redis'],
-    image: 'https://via.placeholder.com/600x340/533483/ffffff?text=Chat+Application',
-    github: 'https://github.com/yourusername/chat-app',
-    demo: 'https://chat-demo.yourdomain.com'
-  },
-  {
-    title: 'Dashboard Analytics Tool',
-    description: 'A comprehensive analytics dashboard with data visualization, customizable reports, and intelligent insights for business metrics.',
-    tags: ['React', 'D3.js', 'Node.js', 'PostgreSQL', 'Material UI'],
-    image: 'https://via.placeholder.com/600x340/0f3460/ffffff?text=Analytics+Dashboard',
-    github: 'https://github.com/yourusername/analytics-dashboard',
-    demo: 'https://analytics-demo.yourdomain.com'
-  },
-  {
-    title: 'Booking Management System',
-    description: 'An appointment scheduling platform with calendar integration, automated reminders, and payment processing for service-based businesses.',
-    tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Stripe'],
-    image: 'https://via.placeholder.com/600x340/1a1a2e/ffffff?text=Booking+System',
-    github: 'https://github.com/yourusername/booking-system',
-    demo: 'https://booking-demo.yourdomain.com'
-  }
-];
-
 // Add your actual social media URLs here
 export const SOCIAL_LINKS = {
   linkedin: "https://linkedin.com/in/smit-dankhra",
@@ -135,6 +83,58 @@ export const SOCIAL_LINKS = {
 
 // Services section data
 import { Code, Globe, Layers, Smartphone, Database, Server, PenTool, Repeat } from "lucide-react";
+
+// Projects data with specialized background images
+export const PROJECTS = [
+  {
+    title: "Modern CMS Platform",
+    description: "A content management system with intuitive UI, real-time editing, and media library management capabilities.",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1470&auto=format&fit=crop",
+    tags: ["React", "Node.js", "MongoDB", "Express"],
+    demo: "https://cms-demo.example.com",
+    github: "https://github.com/smitdankhra/cms-platform"
+  },
+  {
+    title: "Real-time Chat Application",
+    description: "End-to-end encrypted messaging platform with video calls, file sharing, and group chat functionality.",
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1374&auto=format&fit=crop",
+    tags: ["WebSockets", "Socket.IO", "React", "Redux", "Firebase"],
+    demo: "https://chat-app.example.com",
+    github: "https://github.com/smitdankhra/chat-application"
+  },
+  {
+    title: "Analytics Dashboard",
+    description: "Interactive data visualization tool with real-time metrics, customizable charts, and automated reporting.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop",
+    tags: ["D3.js", "Chart.js", "Next.js", "TypeScript", "GraphQL"],
+    demo: "https://analytics-dashboard.example.com",
+    github: "https://github.com/smitdankhra/analytics-dashboard"
+  },
+  {
+    title: "Booking Management System",
+    description: "Comprehensive reservation platform for handling appointments, resources, and payment processing.",
+    image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1470&auto=format&fit=crop",
+    tags: ["React", "Node.js", "PostgreSQL", "Stripe API", "Docker"],
+    demo: "https://booking-system.example.com",
+    github: "https://github.com/smitdankhra/booking-system"
+  },
+  {
+    title: "E-commerce Solution",
+    description: "Full-featured online store with inventory management, payment processing, and customer analytics.",
+    image: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?q=80&w=1470&auto=format&fit=crop",
+    tags: ["Next.js", "Tailwind CSS", "Prisma", "Stripe", "Vercel"],
+    demo: "https://ecommerce.example.com",
+    github: "https://github.com/smitdankhra/ecommerce-platform"
+  },
+  {
+    title: "Portfolio Builder",
+    description: "Drag-and-drop website builder specifically designed for creative professionals to showcase their work.",
+    image: "https://images.unsplash.com/photo-1546027658-7aa750153465?q=80&w=1470&auto=format&fit=crop",
+    tags: ["React", "Firebase", "Framer Motion", "AWS S3"],
+    demo: "https://portfolio-builder.example.com",
+    github: "https://github.com/smitdankhra/portfolio-builder"
+  }
+];
 
 export const SERVICES = [
   {
