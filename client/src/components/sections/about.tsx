@@ -55,25 +55,25 @@ export default function About() {
           >
             <Card className="overflow-hidden border-primary/10 shadow-xl backdrop-blur-sm bg-card/90">
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-[1fr_2fr] gap-8">
-                  <motion.div
+                <div className="grid gap-8">
+                  {/* <motion.div
                     className="flex flex-col items-center justify-center"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3, duration: 0.5 }}
                   >
-                    <img 
+                    {/* <img 
                       src="https://github.com/identicons/app/blob/main/public/identicons/smit.png?raw=true" 
                       alt="Profile" 
                       className="w-40 h-40 rounded-xl object-cover shadow-md border-2 border-primary/20 mb-4" 
-                    />
-                    <div className="flex gap-2 mt-4">
+                    /> */}
+                    {/* <div className="flex gap-2 mt-4">
                       <Badge variant="outline" className="px-3 py-1 border-primary/20 text-primary">Next.js</Badge>
                       <Badge variant="outline" className="px-3 py-1 border-primary/20 text-primary">React</Badge>
                       <Badge variant="outline" className="px-3 py-1 border-primary/20 text-primary">Node.js</Badge>
                     </div>
-                  </motion.div>
+                  </motion.div> */} 
 
                   <div className="space-y-4">
                     <motion.p 
